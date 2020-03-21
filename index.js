@@ -28,7 +28,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is loaded and online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`Minecraft. | b.help`);
+  bot.user.setActivity(`b.commands`)
 });
 
 bot.on('guildMemberAdd', member => {
