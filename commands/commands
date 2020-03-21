@@ -6,5 +6,5 @@ message.channel.send(`1. b.ping \ new commands soon!`);
 
 }
 module.exports.help = {
-  name: "cmds"
+  name: "commands"
 }
