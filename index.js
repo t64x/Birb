@@ -28,29 +28,29 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is loaded and online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`with T64x. | -help`);
+  bot.user.setActivity(`Minecraft. | -help`);
 });
 
 bot.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find(ch => ch.name === 'welcome👋');
+  const channel = member.guild.channels.find(ch => ch.name === 'welcome to the hood');
   if (!channel) return;
   let welcomeembed = new Discord.RichEmbed()
   .setAuthor(member.user.username, member.user.displayAvatarURL)
   .setThumbnail(member.user.displayAvatarURL)
   .setTimestamp()
-  .addField(`<:addMember:518733392402186240> Welcome to the server, **${member.user.tag}**`, `<a:cooldoge:511180988601073665> Thanks for joining with us, ${member}`)
+  .addField(`<:addMember:518733392402186240> Welcome to the server, **${member.user.tag}**`, `Thanks for joining with us, ${member}`)
   .setColor(`#409cd9`)
   channel.send(welcomeembed);
 });
 
 
 bot.on('guildMemberRemove', member => {
-  const channel = member.guild.channels.find(ch => ch.name === 'welcome👋');
+  const channel = member.guild.channels.find(ch => ch.name === 'welcome to the hood');
   if (!channel) return;
   let goodbyeembed = new Discord.RichEmbed()
   .setAuthor(member.user.username, member.user.displayAvatarURL)
   .setTimestamp()
-  .addField(`<:remMember:518733397783347200> Goodbye, **${member.user.tag}**`, `<a:wave:512259019386126337> We hope to see you again, ${member}`)
+  .addField(`<:remMember:518733397783347200> sayonara, **${member.user.tag}**`, `<a:wave:512259019386126337> We hope to see you again, ${member}`)
   .setColor(`#ff3320`)
   channel.send(goodbyeembed);
 });
@@ -83,9 +83,9 @@ bot.on("message", async message => {
       message.delete();
       let badword = new Discord.RichEmbed()
       .setAuthor(message.member.displayName, message.author.displayAvatarURL)
-      .setDescription("<a:hyperpinged:511872097304313859> Message deleted!")
+      .setDescription("<a:hyperpinged:511872097304313859> Message yeeted!")
       .setColor("#f44242")
-      .addField("<:Content_Blocked:523798974876876810> \`Your message contains inappropriate letters or words, deleted.\` <a:BoiGifFixed:511160003667689484>", message.author)
+      .addField("<:Content_Blocked:523798974876876810> \`ur msg contains inappropriate letters or words, yeeted.\` <a:BoiGifFixed:511160003667689484>", message.author)
       message.channel.send(badword).then(msg => {msg.delete(10850)});
   }
   
@@ -104,7 +104,7 @@ bot.on("message", async message => {
       .setAuthor(message.member.displayName, message.author.displayAvatarURL)
       .setDescription("<a:hyperpinged:511872097304313859> Message deleted!")
       .setColor("#f44242")
-      .addField("<:Content_Blocked:523798974876876810> \`Your message contains off-site links, deleted.\` <a:BoiGifFixed:511160003667689484>", message.author)
+      .addField("<:Content_Blocked:523798974876876810> \`ur msg contains off-site links, yeeted.\` <a:BoiGifFixed:511160003667689484>", message.author)
       message.channel.send(offsitestuff).then(msg => {msg.delete(10850)});
   }
 
